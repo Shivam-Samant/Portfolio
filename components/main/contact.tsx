@@ -1,24 +1,22 @@
-"use client"
-
-import React from 'react'
-import EmailClient from '../../shared/EmailClient'
+import React from 'react';
+import EmailClient from '../../shared/EmailClient';
 
 export const ContactMe = () => {
-    const nameRef = React.useRef(null);
-    const emailRef = React.useRef(null);
-    const messageRef = React.useRef(null);
+    const nameRef = React.useRef<HTMLInputElement>(null);
+    const emailRef = React.useRef<HTMLInputElement>(null);
+    const messageRef = React.useRef<HTMLTextAreaElement>(null);
     
     function sendEmail(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
 
         const templateParams = {
-            from_name: nameRef?.current?.value,
-            from_email: emailRef?.current?.value,
-            to_name: 'Shivam Samant',
-            message: messageRef?.current?.value,
+            from_name: nameRef.current?.value || '',
+            from_email: emailRef.current?.value || '',
+            to_name: "Shivam Samant",
+            message: messageRef.current?.value || '',
         };
 
-        EmailClient.sendEmail(templateParams)
+        EmailClient.sendEmail(templateParams);
     }
 
     return (
