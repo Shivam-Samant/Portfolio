@@ -8,7 +8,7 @@ export const ContactMe = () => {
     const emailRef = React.useRef(null);
     const messageRef = React.useRef(null);
     
-    function sendEmail(e) {
+    function sendEmail(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
 
         const templateParams = {
