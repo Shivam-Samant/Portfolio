@@ -3,6 +3,7 @@ import { Projects } from "@/components/main/projects";
 import { Skills } from "@/components/main/skills";
 import { ContactMe } from "@/components/main/contact"
 import { Footer } from "@/components/main/footer";
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Home() {
   return (
