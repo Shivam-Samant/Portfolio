@@ -6,6 +6,7 @@ import {
   RxTwitterLogo,
   RxLinkedinLogo,
 } from "react-icons/rx";
+import { TbBrandLeetcode } from "react-icons/tb";
 
 export const SOCIALS = [
   {
@@ -23,6 +24,11 @@ export const SOCIALS = [
     icon: RxTwitterLogo,
     link: "https://twitter.com/ShivamSamant5",
   },
+  {
+    name: "LeetCode",
+    icon: TbBrandLeetcode,
+    link: "https://leetcode.com/shivamsamant1111",
+  }
 ] as const;
 
 export const FRONTEND_SKILL = [
@@ -219,115 +225,59 @@ export const PROJECTS = [
   {
     title: "SankalpTaru",
     description: 'Nature-centric enthusiasts, planting trees for the people, by the people!',
-    image: "/projects/project-1.png",
-    link: "https://example.com",
+    image: "/projects/sankalptaru.png",
+    link: "https://sankalptaru.org/",
   },
   {
     title: "Lopez Design",
     description: 'Multidisciplinary design studio and brand consultant.',
-    image: "/projects/project-2.png",
-    link: "https://example.com",
+    image: "/projects/lopez.png",
+    link: "https://thisislopez.com/",
   },
   {
     title: "BeCause",
     description: 'An ecosystem containing various modules to become the home for citizen’s social contribution milestones.',
-    image: "/projects/project-3.png",
-    link: "https://example.com",
-  },
-  {
-    title: "SPASHT",
-    description: 'Smart Parking Automated System for Hassle-Free Tracking.',
-    image: "/projects/project-3.png",
-    link: "https://example.com",
-  },
-  {
-    title: "CMS",
-    description: 'Central Maintenance System.',
-    image: "/projects/project-3.png",
-    link: "https://example.com",
-  },
-  {
-    title: "VALL",
-    description: 'Bringing together diverse talents to drive sustainable and impactful change for NGOs.',
-    image: "/projects/project-3.png",
-    link: "https://example.com",
+    image: "/projects/because.png",
+    link: "https://because.center/welcome",
   },
   {
     title: "CII - Sustainable Development",
     description: 'Centre of Excellence for Sustainable Development.',
-    image: "/projects/project-3.png",
-    link: "https://example.com",
+    image: "/projects/cii.png",
+    link: "https://sustainabledevelopment.in/brands/17th-sustainability-summit/",
   },
   {
     title: "SwaTaleem",
     description: 'Creating Thriving School Communities For Adolescent Girls In India.',
-    image: "/projects/project-3.png",
-    link: "https://example.com",
+    image: "/projects/swataleem.png",
+    link: "https://www.swataleem.org/",
+  },
+] as const;
+
+export const EXTRA = [
+  {
+    title: "SPASHT",
+    description: 'Smart Parking Automated System for Hassle-Free Tracking.',
+    image: "/projects/spasht.png",
+    link: "https://github.com/Shivam-Samant/SPASHT",
+  },
+  {
+    title: "CMS",
+    description: 'Central Maintenance System.',
+    image: "/projects/cms.png",
+    link: "https://github.com/Shivam-Samant/central-maintenance-system/",
   },
   {
     title: "Employee Portal",
     description: 'A hub-and-spoke platform for organizations to effectively manage their operations and data.',
-    image: "/projects/project-3.png",
-    link: "https://example.com",
-  },
-] as const;
-
-export const FOOTER_DATA = [
-  {
-    title: "Community",
-    data: [
-      {
-        name: "YouTube",
-        icon: FaYoutube,
-        link: "https://youtube.com",
-      },
-      {
-        name: "GitHub",
-        icon: RxGithubLogo,
-        link: "https://github.com",
-      },
-      {
-        name: "Discord",
-        icon: RxDiscordLogo,
-        link: "https://discord.com",
-      },
-    ],
-  },
-  {
-    title: "Social Media",
-    data: [
-      {
-        name: "Instagram",
-        icon: RxInstagramLogo,
-        link: "https://instagram.com",
-      },
-      {
-        name: "Twitter",
-        icon: RxTwitterLogo,
-        link: "https://twitter.com/shivam5",
-      },
-      {
-        name: "Linkedin",
-        icon: RxLinkedinLogo,
-        link: "https://linkedin.com/in/shivam~samant",
-      },
-    ],
-  },
-  {
-    title: "About",
-    data: [
-      {
-        name: "Contact Me",
-        icon: null,
-        link: "mailto:contact@example.com",
-      },
-    ],
+    image: "/projects/portal.png",
+    link: "https://github.com/coloredcow/portal",
   },
 ] as const;
 
 export const NAV_LINKS = [
   {
-    title: "About me",
+    title: "About Me",
     link: "#about-me",
   },
   {
@@ -339,7 +289,7 @@ export const NAV_LINKS = [
     link: "#projects",
   },
   {
-    title: "Contact me",
+    title: "Contact Me",
     link: "#contact-me",
   },
 ] as const;
