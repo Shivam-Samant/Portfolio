@@ -2,6 +2,19 @@
 
 import React from 'react';
 import EmailClient from '../../shared/EmailClient';
+import { ToastContainer, toast, Bounce } from 'react-toastify'
+
+const toastOptions = {
+    position: "top-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "colored",
+    transition: Bounce,
+}
 
 export const ContactMe = () => {
     const nameRef = React.useRef<HTMLInputElement>(null);
@@ -18,7 +31,15 @@ export const ContactMe = () => {
             message: messageRef.current?.value || '',
         };
 
-        EmailClient.sendEmail(templateParams);
+        EmailClient.sendEmail(templateParams, onEmailSuccess, onEmailError);
+    }
+
+    const onEmailSuccess = () => {
+        toast.success('Your message has been successfully sent.', toastOptions);
+    }
+
+    const onEmailError = () => {
+        toast.error('Oops! Something went wrong while sending your message.', toastOptions);
     }
 
     return (
@@ -28,7 +49,7 @@ export const ContactMe = () => {
             </h1>
             <p className="mb-8 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Just want to say hey? Get In Touch!</p>
             
-            <form onSubmit={sendEmail} className="contact-form space-y-8">
+            <form onSubmit={sendEmail} method="POST" className="contact-form space-y-8">
                 <div>
                     <label htmlFor="user_name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Name</label>
                     <input style={{ background: "hsla(0, 0%, 100%, .1)" }} ref={nameRef} type="text" name="user_name" className="block p-3 w-full text-sm text-gray-300 dark:text-gray-300 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500" placeholder="Your name" required />
@@ -43,6 +64,19 @@ export const ContactMe = () => {
                 </div>
                 <button type="submit" className="px-4 py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]">Send Message</button>
             </form>
+
+            <ToastContainer
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="colored"
+            />
         </section>
     );
 };
