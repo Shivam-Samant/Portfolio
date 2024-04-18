@@ -2,9 +2,21 @@
 
 import React from 'react';
 import EmailClient from '../../shared/EmailClient';
-import { ToastContainer, toast, Bounce } from 'react-toastify'
+import { ToastContainer, toast, Bounce, ToastPosition } from 'react-toastify'
 
-const toastOptions = {
+type ToastOptions = {
+    position: ToastPosition | undefined;
+    autoClose: number;
+    hideProgressBar: boolean;
+    closeOnClick: boolean;
+    pauseOnHover: boolean;
+    draggable: boolean;
+    progress: undefined;
+    theme: string;
+    transition: typeof Bounce;
+}
+
+const toastOptions: ToastOptions = {
     position: "top-right",
     autoClose: 5000,
     hideProgressBar: false,
