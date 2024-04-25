@@ -19,7 +19,7 @@ export const ProjectCard = ({
       href={link}
       target="_blank"
       rel="noreferrer noopener"
-      className="relative overflow-hidden rounded-lg shadow-lg border border-[#2A0E61] !w-[500px]"
+      className="w-full !md:w-[300px] !lg:w-[400px] !xl:w-[500px] relative overflow-hidden rounded-lg shadow-lg border border-[#2A0E61]"
     >
       <Image
         src={src}

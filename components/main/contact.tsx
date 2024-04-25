@@ -55,7 +55,7 @@ export const ContactMe = () => {
     }
 
     return (
-        <section id="contact-me" className="bg-transparent pb-20 px-4 mx-auto w-[100%] md:w-[50%]">
+        <section id="contact-me" className="bg-transparent pb-10 md:pb-20 px-4 mx-auto w-[100%] md:w-[50%]">
             <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 text-center">
                 Contact Me
             </h1>
